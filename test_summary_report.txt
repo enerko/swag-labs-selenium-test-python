@@ -1,0 +1,18 @@
+
+===== Test Results by Username & Test Type =====
+
+
+Username: standard_user
+  Performance Tests - Passed: 3 (100.00%), Failed: 0 (0.00%)
+
+Username: problem_user
+  Performance Tests - Passed: 3 (100.00%), Failed: 0 (0.00%)
+
+Username: performance_glitch_user
+  Performance Tests - Passed: 1 (33.33%), Failed: 2 (66.67%)
+
+Username: error_user
+  Performance Tests - Passed: 3 (100.00%), Failed: 0 (0.00%)
+
+Username: visual_user
+  Performance Tests - Passed: 3 (100.00%), Failed: 0 (0.00%)
