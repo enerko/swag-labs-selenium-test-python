@@ -1,13 +1,14 @@
 from selenium.webdriver.common.by import By
+from pages.base_page import BasePage
 
-class CartPage:
+class CartPage(BasePage):
     def __init__(self, driver):
         self.driver = driver
-        self.add_to_cart_button = (By.ID, "add-to-cart-sauce-labs-backpack")
-        self.cart_link = (By.CLASS_NAME, "shopping_cart_link")
+        self.checkout_button = (By.ID, "checkout")
+        self.shopping_button = (By.ID, "continue-shopping")
 
-    def add_item_to_cart(self):
-        self.driver.find_element(*self.add_to_cart_button).click()
-
-    def go_to_cart(self):
-        self.driver.find_element(*self.cart_link).click()
+    def click_checkout(self):
+        self.driver.find_element(*self.checkout_button).click()
+    
+    def click_shopping(self):
+        self.driver.find_element(*self.shopping_button).click()
