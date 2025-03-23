@@ -1,0 +1,12 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore chromedriver
+chromedriver.exe
+
+# Ignore pytest test report file
+test_summary_report.txt
+
+# Ignore IDE config folders
+.vscode/
