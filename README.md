@@ -20,3 +20,10 @@ The tests are implemented using:
 - Headless Execution: Run tests without opening the browser, making the tests faster.
 - Detailed Reporting: Generates detailed test reports categorized by users and test types.
 - Parameterized Tests: Supports multiple user roles, including `standard_user`, `problem_user`, and others.
+
+## Test Cases
+
+A detailed list of test cases, including test types, steps, and expected results, can be found here: 
+[**Swag Labs Test Cases**](https://docs.google.com/spreadsheets/d/1QyHx-_dJrUHkXe4uBeoVitd3-3S0u8P9eQRnES6aiCM/edit?usp=sharing)
+
+This document outlines functional, UI, and performance test cases used to validate the application's behavior.
