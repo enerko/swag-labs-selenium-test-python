@@ -1,7 +1,0 @@
-test_case_id,username,password,expected_result
-TC001,standard_user,secret_sauce,pass
-TC002,standard_user,wrong_password,fail
-TC003,invalid_user,secret_sauce,fail
-TC004,,,fail
-TC005,standard_user,,fail
-TC006,locked_out_user,secret_sauce,fail
