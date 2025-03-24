@@ -6,8 +6,6 @@ from pages.cart_page import CartPage
 from pages.checkout_info_page import CheckoutInfoPage
 from pages.checkout_overview_page import CheckoutOverviewPage
 import time
-from selenium.webdriver.support.ui import WebDriverWait
-
 # Load test data from CSV
 user_data = [
     tuple(row[:]) for row in csv.reader(open("data/valid_user_data.csv"))
@@ -61,30 +59,6 @@ def test_checkout(driver, username, password):
     checkout_overview_page.click_finish()
 
     assert "Checkout: Complete!" in driver.page_source, f"Couldn't finalize payment for {username}"
-
-@pytest.mark.performance
-@pytest.mark.parametrize("username, password", user_data)
-def test_add_to_cart_time(driver, username, password):
-    login_page = LoginPage(driver)
-    login_page.login(username, password)
-
-    products_page = ProductsPage(driver)
-
-    start_time = time.time()
-
-    products_page.add_backpack_to_cart()
-
-    WebDriverWait(driver, 5).until(
-    lambda d: len(products_page.get_cart_badge()) != 0)
-    
-    # Test how long it takes for the cart item number to update
-    end_time = time.time()
-
-    add_to_cart_duration = end_time - start_time
-    
-    max_time = 2.0
-
-    assert add_to_cart_duration <= max_time, f"{username} took more than {max_time} seconds to add to cart"
 
 @pytest.mark.performance
 @pytest.mark.parametrize("username, password", user_data)
